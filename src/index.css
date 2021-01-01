@@ -1,0 +1,86 @@
+html {
+  padding: 20px 5px 5px 5px;
+  height: 100%;
+  box-sizing: border-box;
+  resize: both;
+}
+
+body {
+  -webkit-app-region: drag;
+  height: 100%;
+  border-style: solid;
+  border-color: slategray;
+  border-width: 4px;
+  margin: 0;
+  padding: 7px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#lang-list {
+  -webkit-app-region: no-drag;
+  padding: 0px 2px;
+  background-color: purple;
+  margin-left: auto;
+  color: white;
+  position: relative;
+  cursor: pointer;
+}
+
+#capture {
+  -webkit-app-region: no-drag;
+  padding: 0px 2px;
+  background-color: blue;
+  color: white;
+  position: relative;
+  cursor: pointer;
+}
+
+#capture-cont {
+  -webkit-app-region: no-drag;
+  padding: 0px 2px;
+  background-color: darkblue;
+  color: white;
+  position: relative;
+  cursor: pointer;
+}
+
+#clear {
+  -webkit-app-region: no-drag;
+  padding: 2px 4px;
+  background-color: green;
+  color: white;
+  position: relative;
+  cursor: pointer;
+}
+
+#close {
+  -webkit-app-region: no-drag;
+  padding: 0px 4px;
+  background-color: red;
+  color: white;
+  position: relative;
+  cursor: pointer;
+}
+
+#toolbar {
+  top: 0;
+  right: 0;
+  margin-right: 5px;
+  position: absolute;
+  height: 20px;
+  display: flex;
+  width: 150px;
+}
+
+#translation {
+  background-color: black;
+  margin: 0 auto;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  display: none;
+  color: white;
+  text-align: center;
+}
