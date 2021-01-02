@@ -49,13 +49,14 @@
   },
   "dependencies": {
     "configstore": "^5.0.1",
-    "screenshot-desktop": "1.12.2",
     "electron-squirrel-startup": "^1.0.0",
     "got": "^11.8.1",
+    "jimp": "^0.16.1",
     "node-tesseract-ocr": "2.0.0",
     "pixelmatch": "^5.2.1",
     "png-crop": "0.0.2",
-    "pngjs": "^6.0.0"
+    "pngjs": "^6.0.0",
+    "screenshot-desktop": "1.12.2"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.54",

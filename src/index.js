@@ -14,7 +14,7 @@ const createWindow = () => {
     transparent: true,
     webPreferences: {
       nodeIntegration: true,
-      devTools: false,
+      // devTools: false,
       enableRemoteModule: true
     }
   });

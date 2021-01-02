@@ -12,7 +12,6 @@ body {
   border-color: slategray;
   border-width: 4px;
   margin: 0;
-  padding: 7px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -79,7 +78,7 @@ body {
   box-sizing: border-box;
   height: 100%;
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   display: none;
   color: white;
   text-align: center;

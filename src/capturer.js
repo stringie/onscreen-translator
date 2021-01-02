@@ -10,6 +10,7 @@ const path = require('path');
 const fs = require('fs')
 const langs = require('./languages');
 const os = require('os');
+const jimp = require("jimp");
 
 document.getElementById('capture').addEventListener('click', () => {
   crop().then(currImage => {
@@ -104,9 +105,20 @@ function crop(translationBox) {
       if (translationBox && translationBox.innerHTML) {
         document.getElementById("translation").style.display = "block";
       }
-      cropper.cropToStream(img, getBounds(), function(err, stream) {
+      const bounds = getBounds();
+      cropper.cropToStream(img, bounds, function(err, stream) {
         if (err) throw err;
-        resolve(stream);
+        if (bounds.height < 100 || bounds.width < 150) {
+          jimp.read(stream).then(result => {
+            result.resize(jimp.AUTO, 100, ((err, val) => {
+              val.getBufferAsync(jimp.MIME_PNG).then((buffer) => {
+                resolve(PNG.sync.read(buffer));
+              })
+            }));
+          });
+        } else {
+          resolve(stream);
+        }
       })
     })
   })
